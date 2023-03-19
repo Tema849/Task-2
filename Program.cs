@@ -31,19 +31,47 @@
 // 32679 -> 6.
 
 
-Console.Write("Введите число: ");
-int Value = Convert.ToInt32(Console.ReadLine());
-int Lenght = Value.ToString().Length;
-if (Lenght >= 3)
+//Console.Write("Введите число: ");
+//int Value = Convert.ToInt32(Console.ReadLine());
+//int Lenght = Value.ToString().Length;
+//if (Lenght >= 3)
+//{
+//    while (Value > 999)
+//    {
+//        Value = Value / 10;
+//    }
+//    int result = Value % 10;
+//    Console.WriteLine("Третья цифра числа: " +result);
+//}
+//else
+//{
+//    Console.WriteLine("Число содержит меньше трёх цифр.");
+//}
+
+
+// Task 15.
+// Напишите программу, которая принимает на вход цифру, 
+// обозначающую день недели,и проверяет, является ли этот день выходным.
+// Пример:
+// 6 -> да.
+// 7 -> да.
+// 1 -> нет.
+
+
+Console.Write("Введите день недели: ");
+int Day = Convert.ToInt32(Console.ReadLine());
+if (Day >= 1 && Day <=7)
 {
-    while (Value > 999)
+    if (Day >=6)
     {
-        Value = Value / 10;
+        Console.Write("Да.");
     }
-    int result = Value % 10;
-    Console.WriteLine("Третья цифра числа: " +result);
+    else
+    {
+        Console.Write("Нет.");
+    }
 }
 else
 {
-    Console.WriteLine("Число содержит меньше трёх цифр.");
+    Console.Write("Введите действительный день между 1 и 7.");
 }
